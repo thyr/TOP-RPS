@@ -1,13 +1,17 @@
 // LOGIC
-function getCPUChoice() {
+const winScore = 5;
+let humanScore = 0;
+let cpuScore = 0;
+
+function getCPUChoice(cpuChoice) {
   let randomNumber = Math.floor(Math.random() * (3 - 1 + 1) + 1);
   switch (randomNumber) {
     case 1:
-      return "ROCK";
+      return (cpuChoice = "ROCK");
     case 2:
-      return "PAPER";
+      return (cpuChoice = "PAPER");
     case 3:
-      return "SCISSORS";
+      return (cpuChoice = "SCISSORS");
   }
 }
 
@@ -27,8 +31,9 @@ function getHumanChoice(humanChoice) {
   return humanChoice;
 }
 
-let cpuChoice = getCPUChoice();
-let humanChoice = getHumanChoice();
-
-console.log(`You chose: ${humanChoice}`);
-console.log(`The CPU picked: ${cpuChoice}`);
+function playRound(humanSelection, cpuSelection) {
+  humanSelection = getHumanChoice();
+  cpuSelection = getCPUChoice();
+  console.log(`You chose: ${humanSelection}`);
+  console.log(`The CPU picked: ${cpuSelection}`);
+}
