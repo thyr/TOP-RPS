@@ -1,7 +1,16 @@
-function randomIntFromInterval(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
+// LOGIC
+function getCPUChoice() {
+  let randomNumber = Math.floor(Math.random() * (3 - 1 + 1) + 1);
+  switch (randomNumber) {
+    case 1:
+      return "ROCK";
+    case 2:
+      return "PAPER";
+    case 3:
+      return "SCISSORS";
+  }
 }
 
-const computerChoice = randomIntFromInterval(1, 3);
+let cpuChoice = getCPUChoice();
 
-console.log(computerChoice);
+console.log(cpuChoice);
