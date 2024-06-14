@@ -11,6 +11,24 @@ function getCPUChoice() {
   }
 }
 
-let cpuChoice = getCPUChoice();
+function getHumanChoice(humanChoice) {
+  let validChoice = 0;
+  while (validChoice != 1) {
+    let humanChoiceRaw = prompt(
+      "Choose your weapon! (ROCK, PAPER or SCISSORS)"
+    );
+    humanChoice = humanChoiceRaw.toUpperCase();
+    if (!["ROCK", "PAPER", "SCISSORS"].includes(humanChoice)) {
+      console.log(`${humanChoice} is not a weapon! Try again!`);
+    } else {
+      validChoice = 1;
+    }
+  }
+  return humanChoice;
+}
 
-console.log(cpuChoice);
+let cpuChoice = getCPUChoice();
+let humanChoice = getHumanChoice();
+
+console.log(`You chose: ${humanChoice}`);
+console.log(`The CPU picked: ${cpuChoice}`);
