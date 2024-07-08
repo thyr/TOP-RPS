@@ -28,7 +28,7 @@ function getHumanC(humanC) {
 }
 
 function playRound(humanS, cpuS) {
-  humanS = getHumanC();
+  //humanS = getHumanC();
   cpuS = getCPUC();
   console.log(`You chose: ${humanS}`);
   console.log(`The CPU picked: ${cpuS}`);
@@ -68,14 +68,14 @@ function playGame() {
   );
   console.log(`Good luck!`);
 
-  while (roundC < 5) {
-    playRound();
-    console.log(`Current scores:`);
-    console.log(`You: ${humanScore}`);
-    console.log(`CPU: ${cpuScore}`);
-    console.log(`Starting new round.`);
-    roundC++;
-  }
+  //  while (roundC < 5) {
+  //    playRound();
+  //    console.log(`Current scores:`);
+  //    console.log(`You: ${humanScore}`);
+  //    console.log(`CPU: ${cpuScore}`);
+  //    console.log(`Starting new round.`);
+  //    roundC++;
+  //  }
 
   if (humanScore > cpuScore) {
     winRAR = "YOU";
