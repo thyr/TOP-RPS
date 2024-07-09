@@ -95,7 +95,7 @@ button {
   color: green;
 }
 
-.memory--sword {
+.sword {
   display: inline-block;
   width: 128px;
   height: 128px;
@@ -104,7 +104,7 @@ button {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Cpath fill='%23ff0000' d='M5 20H3v-1H2v-2h1v-1h1v-1h1v-1H4v-1H3v-2h2v1h1v-1h1v-1h1V9h1V8h1V7h1V6h1V5h1V4h1V3h1V2h5v5h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h1v2H9v-1H8v-1H7v1H6v1H5m5-6v-1h1v-1h1v-1h1V9h1V8h1V7h1V6h1V5h1V4h-2v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1H9v1H8v1Z'/%3E%3C/svg%3E");
 }
 
-.memory--battle-axe {
+.axe {
   display: inline-block;
   width: 128px;
   height: 128px;
@@ -113,7 +113,7 @@ button {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Cpath fill='%230df705' d='M15 1h-4v1h-1v1H9v1H8v4h4v1h-1v1h-1v1H9v1H8v1H7v1H6v1H5v1H4v1H3v1H2v1H1v1h1v1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v4h4v-1h1v-1h1v-1h1V7h-4V5h-2'/%3E%3C/svg%3E");
 }
 
-.memory--spear {
+.spear {
   display: inline-block;
   width: 128px;
   height: 128px;
@@ -122,7 +122,7 @@ button {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Cpath fill='%2305eff7' d='M5 19H4v-1H3v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1V9h1V8h1V7h-1V5h2V4h2V3h3v3h-1v2h-1v2h-2V9h-1v1h-1v1h-1v1h-1v1h-1v1H9v1H8v1H7v1H6v1H5Z'/%3E%3C/svg%3E");
 }
 
-.memory--skull {
+.skull {
   display: inline-block;
   width: 128px;
   height: 128px;
