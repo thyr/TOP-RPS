@@ -4,32 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock, Paper, Scissors!</title>
-    <script src="./rps.js"></script>
-    <style>
-      * {
-        font-family: Helvetica;
-      }
-      body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 16px;
-      }
-      button {
-        font-size: 18pt;
-        font-weight: bold;
-      }
-    </style>
+    <script src="./rps.js" defer></script>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div id="button-container">
-      <button id="bRock" onclick="playRound('ROCK',)">pedrolo</button>
-      <button id="bPaper" onclick="playRound('PAPER',)">papelín</button>
-      <button id="bScissors" onclick="playRound('SCISSORS',)">tijerillas</button>
+    <div id="header">
+      <p class="title">CLASH!</p>
+      <p class="subtitle">3 Weapons | 5 Lives | 2 Outcomes</p>
+      <p class="rules">
+        <span class="color-red">Sword</span> outmaneuvers
+        <span class="color-green">Axe</span> |
+        <span class="color-green">Axe</span> chops down
+        <span class="color-blue">Spear</span> |
+        <span class="color-blue">Spear</span> outreaches
+        <span class="color-red">Sword</span>
+      </p>
     </div>
-    <div id="scores">
-
+    <div id="container-weapons">
+      <button id="button-sword"><span class="memory--sword"></span></button>
+      <button id="button-axe"><span class="memory--battle-axe"></span></button>
+      <button id="button-lance"><span class="memory--spear"></span></button>
+    </div>
+    <div id="container-output">
+      <div id="computer-choice-div">
+        <p id="computer-title">Enemy's Weapon</p>
+        <span class="memory--skull" id="computer-choice"></span>
+      </div>
+      <div id="combat-log">
+        <p id="round">Round: 0</p>
+        <p id="lives">Your Lives: 5 | Enemy's Lives: 5</p>
+        <p id="combat"></p>
+      </div>
+    </div>
+    <div id="container-results">
+      <p id="results"></p>
+      <button id="replay">CLASH AGAIN!</button>
     </div>
   </body>
 </html>

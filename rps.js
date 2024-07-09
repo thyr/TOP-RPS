@@ -1,3 +1,13 @@
+// DOM
+const btnSword = document.querySelector("#button-sword"),
+  btnAxe = document.querySelector("#button-axe"),
+  btnLance = document.querySelector("#button-lance"),
+  cpuWeaponIcon = document.querySelector("#computer-choice"),
+  pRound = document.querySelector("#round"),
+  pLives = document.querySelector("#lives"),
+  pCombat = document.querySelector("#combat"),
+  pResults = document.querySelector("#results");
+
 // LOGIC
 let humanScore, cpuScore, winRAR;
 
@@ -5,20 +15,20 @@ function getCPUC(cpuC) {
   let randomNumber = Math.floor(Math.random() * (3 - 1 + 1) + 1);
   switch (randomNumber) {
     case 1:
-      return (cpuC = "ROCK");
+      return (cpuC = "SWORD");
     case 2:
-      return (cpuC = "PAPER");
+      return (cpuC = "LANCE");
     case 3:
-      return (cpuC = "SCISSORS");
+      return (cpuC = "AXE");
   }
 }
 
 function getHumanC(humanC) {
   let validC = 0;
   while (validC != 1) {
-    let humanCRaw = prompt("Choose your weapon! (ROCK, PAPER or SCISSORS)");
+    let humanCRaw = prompt("Choose your weapon! (SWORD, LANCE or AXE)");
     humanC = humanCRaw.toUpperCase();
-    if (!["ROCK", "PAPER", "SCISSORS"].includes(humanC)) {
+    if (!["SWORD", "LANCE", "AXE"].includes(humanC)) {
       console.log(`${humanC} is not a weapon! Try again!`); // I forgot to change the call when I abreviated humanChoice, so it was crashing the function.
     } else {
       validC = 1;
@@ -28,15 +38,15 @@ function getHumanC(humanC) {
 }
 
 function playRound(humanS, cpuS) {
-  //humanS = getHumanC();
+  humanS = getHumanC();
   cpuS = getCPUC();
   console.log(`You chose: ${humanS}`);
   console.log(`The CPU picked: ${cpuS}`);
 
   const choices = {
-    ROCK: { weakTo: "PAPER", strongTo: "SCISSORS" },
-    PAPER: { weakTo: "SCISSORS", strongTo: "ROCK" },
-    SCISSORS: { weakTo: "ROCK", strongTo: "PAPER" },
+    SWORD: { weakTo: "LANCE", strongTo: "AXE" },
+    LANCE: { weakTo: "AXE", strongTo: "SWORD" },
+    AXE: { weakTo: "SWORD", strongTo: "LANCE" },
   };
 
   if (choices[humanS].strongTo === cpuS) {
@@ -58,24 +68,24 @@ function playGame() {
   // Reset scores to 0 on new game
   (humanScore = 0), (cpuScore = 0);
 
-  console.log(`Welcome to Rock, Paper, Scissors!`);
+  console.log(`Welcome to SWORD, LANCE, AXE!`);
   console.log(`Rules:`);
-  console.log(`Rock smashes Scissors.`);
-  console.log(`Paper wraps Rock.`);
-  console.log(`Scissors cuts Paper.`);
+  console.log(`SWORD outmaneuvers AXE.`);
+  console.log(`AXE chops down LANCE.`);
+  console.log(`LANCE outcheaches SWORD.`);
   console.log(
     `It's a best of 5 game. The player with the most points after 5 rounds wins.`
   );
   console.log(`Good luck!`);
 
-  //  while (roundC < 5) {
-  //    playRound();
-  //    console.log(`Current scores:`);
-  //    console.log(`You: ${humanScore}`);
-  //    console.log(`CPU: ${cpuScore}`);
-  //    console.log(`Starting new round.`);
-  //    roundC++;
-  //  }
+  while (roundC < 5) {
+    playRound();
+    console.log(`Current scores:`);
+    console.log(`You: ${humanScore}`);
+    console.log(`CPU: ${cpuScore}`);
+    console.log(`Starting new round.`);
+    roundC++;
+  }
 
   if (humanScore > cpuScore) {
     winRAR = "YOU";
